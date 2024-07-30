@@ -89,7 +89,10 @@ def create_coupon_image(name, phone, email, ticket_number, discount):
     draw = ImageDraw.Draw(template)
     
     # Define font and size
-    font = ImageFont.truetype("arial.ttf", 35)
+    try:
+        font = ImageFont.truetype("arial.ttf", 35)
+    except IOError:
+        font = ImageFont.load_default()
 
     # Add text to template (right side)
     text_x = 630
