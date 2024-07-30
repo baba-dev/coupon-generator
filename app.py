@@ -90,7 +90,7 @@ def create_coupon_image(name, phone, email, ticket_number, discount):
     
     # Define font and size
     try:
-        font = ImageFont.truetype("arial.ttf", 35)
+        font = ImageFont.truetype("Arial.ttf", 35)
     except IOError:
         font = ImageFont.load_default()
 
