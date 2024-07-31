@@ -89,8 +89,9 @@ def create_coupon_image(name, phone, email, ticket_number, discount):
     draw = ImageDraw.Draw(template)
     
     # Define font and size
+    font_path = "Arial.ttf"
     try:
-        font = ImageFont.truetype("Arial.ttf", 35)
+        font = ImageFont.truetype(font_path, 35)
     except IOError:
         font = ImageFont.load_default()
 
